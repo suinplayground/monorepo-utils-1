@@ -73,6 +73,14 @@ describe("toProjectReferences", function () {
         });
         expect(result.ok).toBe(true);
     });
+    it("support yarn workspaces with pointing to the config file itself (which may have any name)", () => {
+        const result = toProjectReferences({
+            rootDir: path.join(__dirname, "fixtures/yarn-workspaces-pointing-to-config-file"),
+            checkOnly: true
+        });
+        expect(result.aggregateError).toBeUndefined();
+        expect(result.ok).toBe(true);
+    });
     it("does not write if the contents will be the same", () => {
         const rootDir = path.join(__dirname, "fixtures/yarn-workspaces");
         const tsConfigPathA = path.join(rootDir, "packages/a/tsconfig.json");

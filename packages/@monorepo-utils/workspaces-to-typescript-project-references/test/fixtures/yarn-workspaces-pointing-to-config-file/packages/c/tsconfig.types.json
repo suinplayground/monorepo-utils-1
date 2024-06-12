@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "types",
+    "composite": true,
+    "emitDeclarationOnly": true
+  }
+}

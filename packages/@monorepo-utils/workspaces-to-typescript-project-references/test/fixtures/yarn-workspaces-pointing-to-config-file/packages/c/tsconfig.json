@@ -1,0 +1,13 @@
+{
+  "references": [
+    {
+      "path": "../a"
+    },
+    {
+      "path": "../b"
+    },
+    {
+      "path": "./tsconfig.types.json"
+    }
+  ]
+}
